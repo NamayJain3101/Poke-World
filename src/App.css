@@ -243,7 +243,7 @@ h6 {
     background-image: url("./images/404-page.gif");
 }
 
-@media (max-height: 800px) and (max-width: 415px) {
+@media (max-height: 800px) and (max-width: 500px) {
     .defaultHero {
         background-image: url("./images/poke1.png");
     }
