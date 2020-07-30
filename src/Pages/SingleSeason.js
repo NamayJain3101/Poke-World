@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import defaultImg from '../images/default.jpg';
 import { SeasonContext } from '../Context';
 import { Link } from 'react-router-dom';
-import Banner from '../Components/Banner';
+// import Banner from '../Components/Banner';
 import StyledHero from '../Components/StyledHero';
 import Title from '../Components/Title';
 
@@ -31,7 +31,8 @@ export default class SingleSeason extends Component {
             </div>
         }
 
-        const {seasonName, seasonNo, description, images, totalEpisodes} = season;
+        // const {seasonName, seasonNo, description, images, totalEpisodes} = season;
+        const {description, images} = season;
 
         return (
             <>

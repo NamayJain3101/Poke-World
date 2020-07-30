@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Season = ({season}) => {
 
-    const {seasonName, seasonNo, images} = season;
+    const {seasonNo, images} = season;
 
     return (
         <article className="season">
