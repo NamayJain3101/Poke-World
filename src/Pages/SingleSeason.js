@@ -4,6 +4,7 @@ import { SeasonContext } from '../Context';
 import { Link } from 'react-router-dom';
 import Banner from '../Components/Banner';
 import StyledHero from '../Components/StyledHero';
+import Title from '../Components/Title';
 
 
 export default class SingleSeason extends Component {
@@ -30,17 +31,23 @@ export default class SingleSeason extends Component {
             </div>
         }
 
-        const {seasonName, seasonNo, images, totalEpisodes} = season;
+        const {seasonName, seasonNo, description, images, totalEpisodes} = season;
 
         return (
             <>
                 <StyledHero img={images[0]}>
-                    <Banner title={"Season" + seasonNo + ': ' + seasonName} subtitle={"No of episodes: " + totalEpisodes} >
-                        <Link to='/seasons' className="btn-primary">
+                    {/* <Banner title={"Season" + seasonNo + ': ' + seasonName} subtitle={"No of episodes: " + totalEpisodes} > */}
+                        {/* <Link to='/seasons' className="btn-primary">
                             Back to seasons
-                        </Link>
-                    </Banner>
+                        </Link> */}
+                    {/* </Banner> */}
                 </StyledHero>
+                <section className="desc">
+                    <h3>Description</h3>
+                    <p>{description}</p>
+                </section>
+                <br/><br/>
+                <Title title="Episodes" />
                 {/* {episodes.map((item, index) => {
                     return (
                     <Link key={index} to={'/seasons/' + seasonNo + "/" + item.episodeNo}>

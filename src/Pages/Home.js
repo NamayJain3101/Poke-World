@@ -9,10 +9,8 @@ const Home = () => {
         <>
             <Hero>
                 <Banner title="Want to watch Pokemon" subtitle="Watch all seasons right here">
-                    <Link to='/seasons'>
-                        <button className="btn-primary">
+                    <Link to='/seasons' className="btn-primary">
                             All Seasons
-                        </button>
                     </Link>
                 </Banner>
             </Hero>

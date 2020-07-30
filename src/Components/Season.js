@@ -14,11 +14,11 @@ const Season = ({season}) => {
                 <div className="sno-top">
                     <h6>Season {seasonNo}</h6>
                 </div>
-                <Link to={'/seasons/' + seasonNo} className="btn-primary season-link">
+                <Link to={'/seasons/' + seasonNo} className="btn-secondary season-link">
                     Episodes
                 </Link>
             </div>
-            <p className="season-info">{seasonName}</p>
+            {/* <p className="season-info">{seasonName}</p> */}
         </article>
     )
 }

@@ -9,8 +9,8 @@ const AllSeasons = () => {
         <>
             <Hero hero="seasonHero">
                 <Banner title="All Seasons">
-                    <Link to='/'>
-                        <button className="btn-primary">Back to home</button>
+                    <Link to='/' className="btn-primary">
+                        Back to home
                     </Link>
                 </Banner>
             </Hero>

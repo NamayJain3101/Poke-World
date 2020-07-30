@@ -109,8 +109,27 @@ h6 {
     cursor: pointer;
 }
 
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: black;
+    font-weight: bold;
+    background: yellow;
+    padding: 0.4rem 0.9rem;
+    border: 2px solid black;
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 .btn-primary:hover {
     background: var(--primaryColor);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: red;
     color: white;
 }
 
@@ -148,6 +167,7 @@ h6 {
     padding: 0.75rem 2rem;
     background: aqua;
     z-index: 1;
+    box-shadow: 0px 4px 50px black;
 }
 
 .nav-header {
@@ -425,12 +445,13 @@ h6 {
 /* room */
 
 .season {
-    box-shadow: var(--lightShadow);
+    box-shadow: 4px 4px 40px blueviolet;
     transition: var(--mainTransition);
+    margin: 3rem 1.5rem;
 }
 
 .season:hover {
-    box-shadow: var(--darkShadow);
+    box-shadow: 4px 4px 40px red;
 }
 
 .img-container {
@@ -440,17 +461,20 @@ h6 {
 .img-container img {
     width: 100%;
     display: block;
+    padding: 2rem 0;
     transition: var(--mainTransition);
 }
 
 .sno-top {
     position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: var(--mainWhite);
-    padding: 0.3rem 0.6rem 0.5rem;
-    border-bottom-right-radius: 1rem;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: orange;
+    color: black;
+    padding: 0.6rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     font-size: 0.5rem;
     text-align: center;
     transition: var(--mainTransition);
@@ -459,8 +483,8 @@ h6 {
 .sno-top h6 {
     margin-bottom: 0;
     font-size: 0.9rem;
-    font-weight: 300;
-    letter-spacing: var(--mainSpacing);
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 
 .season-link {
@@ -472,7 +496,7 @@ h6 {
 }
 
 .img-container:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 0, 0.4);
 }
 
 .img-container:hover img {
@@ -488,7 +512,7 @@ h6 {
 }
 
 .season-info {
-    background: lightgreen;
+    background: lime;
     color: black;
     height: 60px;
     display: flex;
@@ -507,8 +531,7 @@ h6 {
 
 /* single room*/
 
-
-/* .single-season {
+.single-season {
     padding: 5rem 0 0 0;
 }
 
@@ -536,6 +559,7 @@ h6 {
 .desc,
 .info {
     margin: 1rem 0;
+    padding: 0 4rem;
 }
 
 .desc h3 {
@@ -545,6 +569,7 @@ h6 {
 
 .desc p {
     line-height: 1.5;
+    text-align: justify;
 }
 
 .info h3,
@@ -590,7 +615,7 @@ h6 {
     .info {
         padding-left: 3rem;
     }
-} */
+}
 
 
 /* end of single room*/
@@ -631,7 +656,7 @@ h6 {
 /*  rooms fitler*/
 
 .filter-container {
-    padding: 5rem 0;
+    padding: 5rem 0 0 0;
 }
 
 .filter-form {
@@ -651,15 +676,21 @@ h6 {
     display: block;
     letter-spacing: var(--mainSpacing);
     margin-bottom: 0.5rem;
+    font-size: 1.3em;
+    text-align: center;
 }
 
 .form-control {
     width: 100%;
-    background: transparent;
-    font-size: 1rem;
+    background: pink;
+    border: 2px solid red;
+    padding: 6px 12px;
+    font-size: 1.2em;
+    text-transform: capitalize;
 }
 
-.size-inputs {
+
+/* .size-inputs {
     display: flex;
 }
 
@@ -675,7 +706,7 @@ h6 {
     display: inline-block;
     font-size: 0.8rem;
     margin-left: 0.5rem;
-}
+} */
 
 @media screen and (min-width: 776px) {
     .filter-form {
