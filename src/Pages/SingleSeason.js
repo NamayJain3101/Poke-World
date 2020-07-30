@@ -43,7 +43,7 @@ export default class SingleSeason extends Component {
                     {/* </Banner> */}
                 </StyledHero>
                 <section className="desc">
-                    <h3>Description</h3>
+                    <Title title="description" />
                     <p>{description}</p>
                 </section>
                 <br/><br/>
