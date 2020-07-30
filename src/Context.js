@@ -41,9 +41,18 @@ class SeasonProvider extends Component {
     formatData = (items) => {
         let tempItems = items.map(item => {
             let id = item.sys.id;
-            let images = item.fields.seasonImages.map(image => image.fields.file.url)
-
-            let season = {...item.fields, images, id};
+            let images = item.fields.seasonImages.map(image => image.fields.file.url);
+            let episodes;
+            if(item.fields.episodes){
+                episodes = item.fields.episodes.map(video => {
+                    return ({
+                        episodeNo: video.fields.title.slice(-1),
+                        episodeName: video.fields.description,
+                        episode: video.fields.file.url
+                    })
+                })
+            }
+            let season = {...item.fields, images, id, episodes, loading: this.state.loading};
             return season;
         })
         return tempItems;
@@ -55,6 +64,21 @@ class SeasonProvider extends Component {
             return season.seasonNo === parseInt(seasonNo);
         });
         return season;
+    }
+
+    getEpisode = (seasonNo, episodeNo) => {
+        let tempSeasons = [...this.state.seasons];
+        let tempNo;
+        const episode = tempSeasons.find((episode) => {
+            for(let i=0; i<episode.totalEpisodes; i++){
+                if(parseInt(episode.episodes[i].episodeNo) === parseInt(episodeNo)){
+                    tempNo = parseInt(episode.episodes[i].episodeNo);
+                    break;
+                }
+            }
+            return (episode.seasonNo === parseInt(seasonNo) && tempNo);
+        });
+        return episode;
     }
 
     handleChange = event => {
@@ -82,7 +106,7 @@ class SeasonProvider extends Component {
 
     render() {
         return (
-            <SeasonContext.Provider value={{...this.state, getSeason: this.getSeason, handleChange: this.handleChange}}>
+            <SeasonContext.Provider value={{...this.state, getSeason: this.getSeason, getEpisode: this.getEpisode, handleChange: this.handleChange}}>
                 {this.props.children}
             </SeasonContext.Provider>
         )

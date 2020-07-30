@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import defaultImg from '../images/default.jpg';
-import { SeasonContext } from '../Context';
+import { SeasonContext, SeasonConsumer } from '../Context';
 import { Link } from 'react-router-dom';
 // import Banner from '../Components/Banner';
 import StyledHero from '../Components/StyledHero';
 import Title from '../Components/Title';
-
+import Loading from '../Components/Loading';
 
 export default class SingleSeason extends Component {
     
@@ -23,7 +23,6 @@ export default class SingleSeason extends Component {
 
         const { getSeason } = this.context;
         const season = getSeason(this.state.seasonNo);
-        console.log(season);
         if(!season) {
             return <div className="error">
                 <h3>No Season Found</h3>
@@ -31,8 +30,7 @@ export default class SingleSeason extends Component {
             </div>
         }
 
-        // const {seasonName, seasonNo, description, images, totalEpisodes} = season;
-        const {description, images} = season;
+        const {seasonNo, description, images, episodes} = season;
 
         return (
             <>
@@ -49,13 +47,34 @@ export default class SingleSeason extends Component {
                 </section>
                 <br/><br/>
                 <Title title="Episodes" />
-                {/* {episodes.map((item, index) => {
-                    return (
-                    <Link key={index} to={'/seasons/' + seasonNo + "/" + item.episodeNo}>
-                        {item.episodeNo + ". " + item.episodeName}
-                    </Link>
-                    )
-                })} */}
+                <SeasonConsumer>
+                    {
+                        (value) => {
+                            const {loading} = value;
+                            if(loading) {
+                                return <Loading />
+                            }
+                            return (
+                                <>
+                                    {episodes.map((item, index) => {
+                                        return (
+                                            <div className="episode-container" key={index} >
+                                                <Link to={'/seasons/' + seasonNo + "/" + item.episodeNo} className="episode-link">
+                                                    <span className="Eno">
+                                                        {item.episodeNo}.&nbsp;
+                                                    </span>
+                                                    <span className="Ename">
+                                                        {item.episodeName}
+                                                    </span>
+                                                </Link>
+                                            </div>
+                                        )
+                                    })}
+                                </>
+                            );
+                        }
+                    }
+                </SeasonConsumer>
             </>
         )
     }

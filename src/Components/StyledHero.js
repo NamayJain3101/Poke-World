@@ -3,6 +3,7 @@ import defaultImg from '../images/default.jpg';
 
 const StyledHero = styled.header `
     height: 30vh;
+    width: 50vh;
     margin: 2rem auto 0 auto;
     background-image: url(${props => props.img ? props.img : defaultImg });
     background-repeat: no-repeat;
@@ -11,8 +12,12 @@ const StyledHero = styled.header `
     align-items: center;
     justify-content: center;
     @media(min-width: 768px) {
-        height: 331px;
+        height: 340px;
         width: 588px;
+    }
+    @media(max-height: 500px) and (max-width:800px) {
+        height: 50vh;
+        width: 90vh;
     }
 `
 

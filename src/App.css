@@ -136,7 +136,7 @@ h6 {
 .loading {
     text-transform: capitalize;
     text-align: center;
-    margin-top: 3rem;
+    margin: 1rem auto;
 }
 
 .error {
@@ -601,6 +601,27 @@ h6 {
     grid-row-gap: 1rem;
 }
 
+.episode-container {
+    width: 80vh;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.episode-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.Eno {
+    color: red;
+    font-size: 1.4em;
+}
+
+.Ename {
+    color: green;
+}
+
 @media screen and (min-width: 992px) {
     .single-season-images,
     .single-season-info,
@@ -724,3 +745,14 @@ h6 {
 
 
 /* end of rooms fitler*/
+
+
+/* Video Container */
+
+.single-episode {
+    margin: 2rem auto;
+}
+
+.video-container {
+    margin: 0 auto;
+}
