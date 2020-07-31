@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { SeasonContext } from '../Context';
 import Title from '../Components/Title';
 import ReactPlayer from 'react-player';
-import defaultImg from '../images/default.jpg';
 
 export default class Episode extends Component {
 
