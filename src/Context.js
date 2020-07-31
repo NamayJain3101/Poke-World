@@ -18,7 +18,7 @@ class SeasonProvider extends Component {
         try {
             let response = await Client.getEntries({
                 content_type: "pokeWorld",
-                order: '-fields.seasonNo'
+                order: 'fields.seasonNo'
             });
             let seasons = this.formatData(response.items);
             let featuredSeasons = seasons.filter(season => season.featured === true)
@@ -68,12 +68,15 @@ class SeasonProvider extends Component {
 
     getEpisode = (seasonNo, episodeNo) => {
         let tempSeasons = [...this.state.seasons];
-        let tempNo;
+        let tempNo = 0;
         const episode = tempSeasons.find((episode) => {
-            for(let i=0; i<episode.totalEpisodes; i++){
-                if(parseInt(episode.episodes[i].episodeNo) === parseInt(episodeNo)){
-                    tempNo = parseInt(episode.episodes[i].episodeNo);
-                    break;
+            if(episode.seasonNo === parseInt(seasonNo)){
+                for(let i=0; i<episode.episodes.length; i++){
+                    console.log(episode.episodes[i])
+                    if(parseInt(episode.episodes[i].episodeNo) === parseInt(episodeNo)){
+                        tempNo = parseInt(episode.episodes[i].episodeNo);
+                        break;
+                    }
                 }
             }
             return (episode.seasonNo === parseInt(seasonNo) && tempNo);

@@ -419,6 +419,7 @@ h6 {
 
 .featured-seasons {
     padding: 5rem 0;
+    background: white;
 }
 
 .featured-seasons-center {
@@ -451,13 +452,13 @@ h6 {
 /* room */
 
 .season {
-    box-shadow: 4px 4px 40px blue;
+    box-shadow: 4px 4px 40px red;
     transition: var(--mainTransition);
     margin: 2rem 1rem;
 }
 
 .season:hover {
-    box-shadow: 4px 4px 40px red;
+    box-shadow: 4px 4px 40px blue;
 }
 
 .img-container {

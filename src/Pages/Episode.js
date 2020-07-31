@@ -20,6 +20,7 @@ export default class Episode extends Component {
 
         const { getEpisode } = this.context;
         const episode = getEpisode(this.state.seasonNo, this.state.episodeNo);
+        console.log(episode)
         if(!episode) {
             return <div className="error">
                 <h3>No Episode Found</h3>
@@ -32,8 +33,10 @@ export default class Episode extends Component {
         let tempEpisode = null;
 
         for(let i=0; i<episodes.length; i++) {
-            if(parseInt(episodeNo) === parseInt(episodes[i].episodeNo))
-            tempEpisode = {...episodes[i]};
+            if(parseInt(episodeNo) === parseInt(episodes[i].episodeNo)){
+                tempEpisode = {...episodes[i]};
+                break;
+            }
         }
 
         return (
