@@ -12,7 +12,7 @@ const SeasonsContainer = () => {
                 (value) => {
                     const {loading, sortedSeasons, seasons} = value;
                     if(loading) {
-                        return <Loading />
+                        return <Loading title="Seasons" />
                     }
                     return (
                         <>

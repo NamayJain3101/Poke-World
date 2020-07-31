@@ -18,7 +18,7 @@ class SeasonProvider extends Component {
         try {
             let response = await Client.getEntries({
                 content_type: "pokeWorld",
-                order: 'fields.seasonNo'
+                order: '-fields.seasonNo'
             });
             let seasons = this.formatData(response.items);
             let featuredSeasons = seasons.filter(season => season.featured === true)

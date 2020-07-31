@@ -21,7 +21,7 @@ export default class FeaturedSeasons extends Component {
             <section className="featured-seasons">
                 <Title title="featured seasons" />
                 <div className="featured-seasons-center">
-                    { loading ? <Loading /> : seasons }
+                    { loading ? <Loading title="Featured Seasons" /> : seasons }
                 </div>
             </section>
         )

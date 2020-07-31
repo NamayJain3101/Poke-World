@@ -113,9 +113,9 @@ h6 {
     display: inline-block;
     text-decoration: none;
     letter-spacing: var(--mainSpacing);
-    color: black;
+    color: white;
     font-weight: bold;
-    background: yellow;
+    background: red;
     padding: 0.4rem 0.9rem;
     border: 2px solid black;
     transition: var(--mainTransition);
@@ -129,8 +129,13 @@ h6 {
 }
 
 .btn-secondary:hover {
-    background: red;
+    background: black;
     color: white;
+}
+
+.btn-center {
+    text-align: center;
+    margin: 4rem;
 }
 
 .loading {
@@ -263,7 +268,7 @@ h6 {
     background-image: url("./images/404-page.gif");
 }
 
-@media (max-height: 800px) and (max-width: 500px) {
+@media (max-height: 812px) and (max-width: 500px) {
     .defaultHero {
         background-image: url("./images/poke1.png");
     }
@@ -330,6 +335,7 @@ h6 {
 
 .section-title {
     text-align: center;
+    margin: auto 2rem;
     margin-bottom: 4rem;
 }
 
@@ -445,9 +451,9 @@ h6 {
 /* room */
 
 .season {
-    box-shadow: 4px 4px 40px blueviolet;
+    box-shadow: 4px 4px 40px blue;
     transition: var(--mainTransition);
-    margin: 3rem 1.5rem;
+    margin: 2rem 1rem;
 }
 
 .season:hover {
@@ -601,27 +607,6 @@ h6 {
     grid-row-gap: 1rem;
 }
 
-.episode-container {
-    width: 80vh;
-    margin: 1rem auto;
-    text-align: center;
-}
-
-.episode-link {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2em;
-}
-
-.Eno {
-    color: red;
-    font-size: 1.4em;
-}
-
-.Ename {
-    color: green;
-}
-
 @media screen and (min-width: 992px) {
     .single-season-images,
     .single-season-info,
@@ -749,10 +734,93 @@ h6 {
 
 /* Video Container */
 
+.episode-container {
+    width: 80vw;
+    margin: 1rem auto;
+    text-align: center;
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.episode-link {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    background: pink;
+    font-size: 1.2em;
+}
+
+.episode-link:hover,
+.episode-link:focus {
+    background: lightskyblue;
+}
+
+.Eno {
+    color: red;
+    font-size: 1.4em;
+}
+
+.Ename {
+    color: green;
+}
+
 .single-episode {
     margin: 2rem auto;
 }
 
 .video-container {
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 56.25%;
 }
+
+.video-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 801px) {
+    .video-container {
+        padding-top: 40%;
+    }
+}
+
+
+/* Video container end */
+
+
+/*footer*/
+
+.panel-footer {
+    width: 100%;
+    margin-top: 20px;
+    background: aqua;
+    padding: 2rem;
+    border: 0;
+    box-shadow: 0 60px 50px 50px black;
+}
+
+.panel-footer .description {
+    font-family: serif;
+    font-size: 1.2em;
+    color: red;
+    text-align: justify;
+    cursor: default;
+}
+
+.panel-footer .text-center {
+    color: black;
+    padding: 20px;
+    padding-bottom: 0;
+    text-align: center;
+    cursor: default;
+}
+
+
+/* footer end */

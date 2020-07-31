@@ -7,6 +7,7 @@ import Episode from './Pages/Episode';
 import Error from './Pages/Error';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 class App extends Component {
   render(){
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path='/seasons/:seasonNo/:episode' exact component={Episode} />
           <Route component={Error} />
         </Switch>
+        <Footer />
       </>
     )
   }

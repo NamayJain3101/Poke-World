@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { SeasonContext } from '../Context';
 import Title from '../Components/Title';
+import ReactPlayer from 'react-player';
+import defaultImg from '../images/default.jpg';
 
 export default class Episode extends Component {
 
@@ -32,21 +34,25 @@ export default class Episode extends Component {
 
         for(let i=0; i<episodes.length; i++) {
             if(parseInt(episodeNo) === parseInt(episodes[i].episodeNo))
-            tempEpisode = episodes[i];
+            tempEpisode = {...episodes[i]};
         }
-
-        // let width = window.screen.width;
-        // let height = window.screen.height;
 
         return (
             <div className="single-episode">
                 <Title title={"Season " + seasonNo + " Episode " + tempEpisode.episodeNo} />
                 <div className="video-container">
-                    <div className="video-center">
-                        <video width="auto" height="auto" controls>
-                            <source src={tempEpisode.episode} type="video/mp4"></source>
-                        </video>
-                    </div>
+                    <ReactPlayer 
+                        className="video-player"
+                        url={tempEpisode.episode} 
+                        controls 
+                        pip 
+                        playing
+                        width={ window.screen.width < 800 ? "80%" : "50%" }
+                        height="auto"
+                    />
+                </div>
+                <div className="btn-center">
+                    <Link to={'/seasons/' + seasonNo} className="btn-secondary">Back to Season {seasonNo}</Link>
                 </div>
             </div>
         )

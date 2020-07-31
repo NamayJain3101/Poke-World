@@ -33,49 +33,52 @@ export default class SingleSeason extends Component {
         const {seasonNo, description, images, episodes} = season;
 
         return (
-            <>
-                <StyledHero img={images[0]}>
-                    {/* <Banner title={"Season" + seasonNo + ': ' + seasonName} subtitle={"No of episodes: " + totalEpisodes} > */}
-                        {/* <Link to='/seasons' className="btn-primary">
-                            Back to seasons
-                        </Link> */}
-                    {/* </Banner> */}
-                </StyledHero>
-                <section className="desc">
-                    <Title title="description" />
-                    <p>{description}</p>
-                </section>
-                <br/><br/>
-                <Title title="Episodes" />
                 <SeasonConsumer>
                     {
                         (value) => {
                             const {loading} = value;
                             if(loading) {
-                                return <Loading />
+                                return <Loading title={"Season " + seasonNo} />
                             }
                             return (
                                 <>
-                                    {episodes.map((item, index) => {
-                                        return (
-                                            <div className="episode-container" key={index} >
-                                                <Link to={'/seasons/' + seasonNo + "/" + item.episodeNo} className="episode-link">
-                                                    <span className="Eno">
-                                                        {item.episodeNo}.&nbsp;
-                                                    </span>
-                                                    <span className="Ename">
-                                                        {item.episodeName}
-                                                    </span>
-                                                </Link>
-                                            </div>
-                                        )
-                                    })}
+                                    <StyledHero img={images[0]}></StyledHero>
+                                    <section className="desc">
+                                        <Title title="description" />
+                                        <p>{description}</p>
+                                    </section>
+                                    <br/><br/>
+                                    <Title title="Episodes" />
+                                    <>
+                                        { episodes ? episodes.map((item, index) => 
+                                            {
+                                                return (
+                                                    <div className="episode-container" key={index} >
+                                                        <Link to={'/seasons/' + seasonNo + "/" + item.episodeNo} className="episode-link">
+                                                            <span className="Eno">
+                                                                {item.episodeNo}.&nbsp;
+                                                            </span>
+                                                            <span className="Ename">
+                                                                {item.episodeName}
+                                                            </span>
+                                                        </Link>
+                                                    </div>
+                                                )
+                                            }) : (
+                                                <div className="error">
+                                                    <h3>No Episodes Found</h3>
+                                                </div>
+                                            )
+                                        }
+                                    </>
+                                    <div className="btn-center">
+                                        <Link to='/seasons' className="btn-secondary">Back to Seasons</Link>
+                                    </div>
                                 </>
                             );
                         }
                     }
                 </SeasonConsumer>
-            </>
         )
     }
 }
