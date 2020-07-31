@@ -43,8 +43,8 @@ export default class SingleSeason extends Component {
                             return (
                                 <>
                                     <StyledHero img={images[0]}></StyledHero>
+                                    <Title title="description" />
                                     <section className="desc">
-                                        <Title title="description" />
                                         <p>{description}</p>
                                     </section>
                                     <br/><br/>
