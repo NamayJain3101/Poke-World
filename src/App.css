@@ -99,7 +99,7 @@ h6 {
     display: inline-block;
     text-decoration: none;
     letter-spacing: var(--mainSpacing);
-    color: pink;
+    color: white;
     font-weight: bold;
     background: transparent;
     padding: 0.4rem 0.9rem;
@@ -113,9 +113,9 @@ h6 {
     display: inline-block;
     text-decoration: none;
     letter-spacing: var(--mainSpacing);
-    color: white;
+    color: black;
     font-weight: bold;
-    background: red;
+    background: plum;
     padding: 0.4rem 0.9rem;
     border: 2px solid black;
     transition: var(--mainTransition);
@@ -129,7 +129,7 @@ h6 {
 }
 
 .btn-secondary:hover {
-    background: black;
+    background: blueviolet;
     color: white;
 }
 
@@ -739,7 +739,8 @@ h6 {
     width: 80vw;
     margin: 1rem auto;
     text-align: center;
-    border: 1px solid blue;
+    border: 1px solid black;
+    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -749,22 +750,26 @@ h6 {
     text-decoration: none;
     color: black;
     width: 100%;
-    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 0, 0.4);
     font-size: 1.2em;
 }
 
 .episode-link:hover,
 .episode-link:focus {
-    background: lightskyblue;
+    background: rgb(255, 255, 0, 0.8);
 }
 
 .Eno {
     color: red;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .Ename {
     color: green;
+    font-size: 1.2em;
 }
 
 .single-episode {

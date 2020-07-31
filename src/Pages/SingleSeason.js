@@ -47,7 +47,7 @@ export default class SingleSeason extends Component {
                                     <section className="desc">
                                         <p>{description}</p>
                                     </section>
-                                    <br/><br/>
+                                    <br/>
                                     <Title title="Episodes" />
                                     <>
                                         { episodes ? episodes.map((item, index) => 
@@ -56,7 +56,7 @@ export default class SingleSeason extends Component {
                                                     <div className="episode-container" key={index} >
                                                         <Link to={'/seasons/' + seasonNo + "/" + item.episodeNo} className="episode-link">
                                                             <span className="Eno">
-                                                                {item.episodeNo}.&nbsp;
+                                                                {item.episodeNo}. &nbsp;
                                                             </span>
                                                             <span className="Ename">
                                                                 {item.episodeName}
