@@ -11,11 +11,11 @@ const StyledHero = styled.header `
     display: flex;
     align-items: center;
     justify-content: center;
-    @media(min-width: 768px) {
+    @media(min-width: 812px) {
         height: 340px;
         width: 588px;
     }
-    @media(max-height: 500px) and (max-width:800px) {
+    @media(max-height: 500px) and (max-width:812px) {
         height: 50vh;
         width: 90vh;
     }
