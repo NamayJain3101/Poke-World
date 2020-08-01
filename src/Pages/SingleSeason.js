@@ -26,7 +26,7 @@ export default class SingleSeason extends Component {
         if(!season) {
             return <div className="error">
                 <h3>No Season Found</h3>
-                <Link to='/seasons' className="btn-primary">Back to Seasons</Link>
+                <Link to='/seasons' className="btn-secondary">Back to Seasons</Link>
             </div>
         }
 
@@ -56,8 +56,8 @@ export default class SingleSeason extends Component {
                                                     <div className="episode-container" key={index} >
                                                         <Link to={'/seasons/' + seasonNo + "/" + item.episodeNo} className="episode-link">
                                                             <span className="Eno">
-                                                                {item.episodeNo}. &nbsp;
-                                                            </span>
+                                                                {item.episodeNo}
+                                                            </span> &nbsp;&nbsp;
                                                             <span className="Ename">
                                                                 {item.episodeName}
                                                             </span>

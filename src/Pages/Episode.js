@@ -24,7 +24,7 @@ export default class Episode extends Component {
         if(!episode) {
             return <div className="error">
                 <h3>No Episode Found</h3>
-                <Link to='/seasons' className="btn-primary">Back to Seasons</Link>
+                <Link to='/seasons' className="btn-secondary">Back to Seasons</Link>
             </div>
         }
 
