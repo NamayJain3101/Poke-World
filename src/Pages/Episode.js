@@ -54,7 +54,7 @@ export default class Episode extends Component {
                     />
                 </div>
                 <div className="btn-center">
-                    <Link to={'/seasons/' + seasonNo} className="btn-secondary">Back to Season {seasonNo}</Link>
+                    <Link to={'/seasons/' + seasonNo} className="btn-secondary">to Season {seasonNo}</Link>
                 </div>
             </div>
         )

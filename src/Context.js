@@ -46,7 +46,7 @@ class SeasonProvider extends Component {
             if(item.fields.episodes){
                 episodes = item.fields.episodes.map(video => {
                     return ({
-                        episodeNo: video.fields.title.slice(-1),
+                        episodeNo: video.fields.title.slice(-2),
                         episodeName: video.fields.description,
                         episode: video.fields.file.url
                     })

@@ -9,7 +9,7 @@ const Footer = () => {
                 </span>
             </div>
             <div className="text-center">
-                Copyright &copy; Pokemon World
+                Copyright &copy; Poke World
             </div>
         </footer>
     )
