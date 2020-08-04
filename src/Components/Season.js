@@ -18,7 +18,6 @@ const Season = ({season}) => {
                     Episodes
                 </Link>
             </div>
-            {/* <p className="season-info">{seasonName}</p> */}
         </article>
     )
 }

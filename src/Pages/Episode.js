@@ -20,7 +20,6 @@ export default class Episode extends Component {
 
         const { getEpisode } = this.context;
         const episode = getEpisode(this.state.seasonNo, this.state.episodeNo);
-        console.log(episode)
         if(!episode) {
             return <div className="error">
                 <h3>No Episode Found</h3>

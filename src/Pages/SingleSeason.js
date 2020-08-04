@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import defaultImg from '../images/default.jpg';
 import { SeasonContext, SeasonConsumer } from '../Context';
 import { Link } from 'react-router-dom';
-// import Banner from '../Components/Banner';
 import StyledHero from '../Components/StyledHero';
 import Title from '../Components/Title';
 import Loading from '../Components/Loading';
