@@ -702,6 +702,42 @@ h6 {
     background: orange;
 }
 
+.episode-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.episode-change>.episode-link {
+    background: aqua;
+    width: 5rem;
+    margin: 3rem 1rem 0rem 1rem;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    color: black;
+}
+
+.episode-change>.episode-link:hover {
+    background: blueviolet;
+    width: 5rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.disabled {
+    cursor: not-allowed;
+    text-decoration: none;
+    background: rgba(128, 128, 128, 0.5) !important;
+    color: black !important;
+    pointer-events: none;
+}
+
+@media (min-width: 812px) {
+    .episode-change>.episode-link {
+        margin: 1.5rem 1rem 0rem 1rem;
+    }
+}
+
 .single-episode {
     margin: 2rem auto;
 }

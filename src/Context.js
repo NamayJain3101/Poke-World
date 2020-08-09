@@ -72,7 +72,6 @@ class SeasonProvider extends Component {
         const episode = tempSeasons.find((episode) => {
             if(episode.seasonNo === parseInt(seasonNo)){
                 for(let i=0; i<episode.episodes.length; i++){
-                    console.log(episode.episodes[i])
                     if(parseInt(episode.episodes[i].episodeNo) === parseInt(episodeNo)){
                         tempNo = parseInt(episode.episodes[i].episodeNo);
                         break;
