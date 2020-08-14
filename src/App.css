@@ -704,7 +704,7 @@ h6 {
 .episode-change {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .episode-change>.episode-link {
