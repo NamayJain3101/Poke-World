@@ -56,7 +56,7 @@ export default class SingleSeason extends Component {
                                                         <Link to={'/seasons/' + seasonNo + "/" + item.episodeNo} className="episode-link">
                                                             <span className="Eno">
                                                                 {item.episodeNo}
-                                                            </span> &nbsp;&nbsp;
+                                                            </span>&nbsp;&nbsp;
                                                             <span className="Ename">
                                                                 {item.episodeName}
                                                             </span>

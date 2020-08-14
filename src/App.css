@@ -33,7 +33,7 @@
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    background: orange;
+    background: purple;
 }
 
 :root {
@@ -625,9 +625,9 @@ h6 {
 
 .episode-container {
     width: 40vw;
-    margin: 1rem auto;
+    margin: 1.4rem auto;
     text-align: center;
-    /* border-radius: 3rem; */
+    border-radius: 30%;
     outline: none;
     display: flex;
     /* background: rgba(255, 255, 0, 0.2); khaki */
@@ -646,8 +646,8 @@ h6 {
 .episode-link {
     text-decoration: none;
     width: 100%;
-    border: 1px solid #bbb;
-    /* border-radius: 3rem; */
+    border: 1px solid rgb(144, 220, 144);
+    border-radius: 30%;
     padding: 0.5rem 1rem;
     text-align: left;
     display: flex;
@@ -658,13 +658,12 @@ h6 {
 .Eno {
     color: black;
     font-size: 1.3em;
-    border-right: 1.5px solid black;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border: 1.5px solid black;
+    border-radius: 50%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     text-align: right;
-    padding: 3px 10px 3px 7px;
-    letter-spacing: 2px;
+    padding: 3px 7px;
+    letter-spacing: 0px;
     margin-right: 10px;
 }
 
